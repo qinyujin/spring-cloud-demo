@@ -1,0 +1,12 @@
+my.secretkey: R28K42ZEJ8LWRHU5 #”√”⁄tokenº”√‹
+my.salt: 636eac2534bcfcb0
+server:
+  port: 8070
+
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http://127.0.0.1:8848
+  application:
+    name: login-service
