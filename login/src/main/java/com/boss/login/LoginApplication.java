@@ -9,6 +9,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 /**
  * 启动类
+ *
  * @author 覃玉锦
  */
 @SpringBootApplication
@@ -16,7 +17,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class LoginApplication {
 
     @Bean
-    public PasswordEncoder getPasswordEncoder(){
+    public PasswordEncoder getPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 

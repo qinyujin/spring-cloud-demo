@@ -12,8 +12,8 @@ public class UserDao {
 
     private static User user = initUser();
 
-    public static User initUser(){
-        user=new User();
+    public static User initUser() {
+        user = new User();
         user.setUid(1);
         user.setName("张三");
         user.setNum("001");

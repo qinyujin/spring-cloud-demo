@@ -26,11 +26,13 @@ public class UserController {
 
     @Autowired
     private PasswordEncoder encoder;
+
     @Autowired
     private EncryptComponent encryptComponent;
 
     /**
      * 登录
+     *
      * @param user
      * @param request
      * @return
@@ -59,10 +61,11 @@ public class UserController {
 
     /**
      * 判断登录状态
+     *
      * @return
      */
     @GetMapping("loginStatu")
-    public boolean getLoginStatu(){
+    public boolean getLoginStatu() {
         User user = UserDao.getUser();
         return user.isLoginStatu();
     }

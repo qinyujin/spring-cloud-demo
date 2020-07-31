@@ -10,9 +10,13 @@ import lombok.Data;
 public class User {
 
     private String num;
+
     private String name;
+
     private String password;
+
     private int uid;
+
     private boolean loginStatu;
 
 }
