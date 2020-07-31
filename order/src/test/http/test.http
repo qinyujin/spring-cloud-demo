@@ -1,7 +1,0 @@
-GET http://localhost:8071/api/order/loginStatu
-Accept: application/json
-
-###
-GET http://localhost:8071/api/order/showItems
-Accept: application/json
-
