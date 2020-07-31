@@ -8,3 +8,9 @@ spring:
         server-addr: http://127.0.0.1:8848
   application:
     name: order-service
+
+logging:
+  level:
+    root: warn
+    com:
+      boss: debug

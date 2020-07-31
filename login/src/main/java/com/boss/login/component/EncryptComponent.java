@@ -19,10 +19,13 @@ import org.springframework.web.server.ResponseStatusException;
 public class EncryptComponent {
     @Value("${my.secretkey}")
     private String secretkey;
+
     @Value("${my.salt}")
     private String salt;
+
     @Autowired
     private ObjectMapper objectMapper;
+
     @Autowired
     private TextEncryptor encryptor;
 

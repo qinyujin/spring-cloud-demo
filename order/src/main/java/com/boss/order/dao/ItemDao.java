@@ -15,6 +15,7 @@ public class ItemDao {
     }
 
     private static List<Item> itemList = getItemListInstance();
+
     public static boolean isLogin = false;
 
     private static List<Item> getItemListInstance() {

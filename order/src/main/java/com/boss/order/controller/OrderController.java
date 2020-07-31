@@ -2,6 +2,7 @@ package com.boss.order.controller;
 
 import com.boss.order.dao.ItemDao;
 import com.boss.order.entity.Item;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,6 +20,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/order/")
+@Slf4j
 public class OrderController {
     @Autowired
     private LoginConsumerClient consumer;
@@ -26,23 +28,21 @@ public class OrderController {
     @GetMapping("loginStatu")
     public String judgeLoginStatu(HttpServletRequest request) {
         boolean loginStatu = consumer.getLoginStatu();
-        System.out.println(loginStatu);
-        if(loginStatu){
-            ItemDao.isLogin=true;
+        log.debug("{}", loginStatu);
+        if (loginStatu) {
+            ItemDao.isLogin = true;
             return "已经登录";
-        }
-        else {
+        } else {
             return "未登录";
         }
     }
 
     @GetMapping("showItems")
-    public List<Item> shwoItems(){
+    public List<Item> shwoItems() {
         List<Item> itemList = ItemDao.getItemList();
-        if(!ItemDao.isLogin){
-            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED,"未登录");
-        }
-        else {
+        if (!ItemDao.isLogin) {
+            throw new ResponseStatusException(HttpStatus.UNAUTHORIZED, "未登录");
+        } else {
             return itemList;
         }
     }

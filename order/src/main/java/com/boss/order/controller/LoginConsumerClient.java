@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public interface LoginConsumerClient {
     /**
      * 使用feign调用login-service的服务
+     *
      * @return
      */
     @GetMapping("/api/loginStatu")

@@ -1,4 +1,4 @@
-my.secretkey: R28K42ZEJ8LWRHU5 #ÓÃÓÚtoken¼ÓÃÜ
+my.secretkey: R28K42ZEJ8LWRHU5 #ï¿½ï¿½ï¿½ï¿½tokenï¿½ï¿½ï¿½ï¿½
 my.salt: 636eac2534bcfcb0
 server:
   port: 8070
@@ -10,3 +10,9 @@ spring:
         server-addr: http://127.0.0.1:8848
   application:
     name: login-service
+
+logging:
+  level:
+    root: warn
+    com:
+      boss: debug
