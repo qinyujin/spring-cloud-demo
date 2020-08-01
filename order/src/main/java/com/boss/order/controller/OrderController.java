@@ -4,6 +4,7 @@ import com.boss.order.dao.ItemDao;
 import com.boss.order.entity.Item;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,6 +21,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping("/api/order/")
+@RefreshScope
 @Slf4j
 public class OrderController {
     @Autowired

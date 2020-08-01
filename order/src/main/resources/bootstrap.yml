@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: order-service
+  cloud:
+    nacos:
+      config:
+        server-addr: 127.0.0.1:8848 #配置中心的地址
+        file-extension: yaml    #后缀，去配置中心找文件就找springname+后缀 ->nacos-test.yaml
+        namespace: 6668a16f-cc7d-4245-9f11-3e7c55868347  #分支id
+        group: DEFAULT_GROUP

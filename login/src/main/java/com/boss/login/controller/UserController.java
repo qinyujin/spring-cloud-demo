@@ -6,6 +6,7 @@ import com.boss.login.dao.UserDao;
 import com.boss.login.entity.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
@@ -21,6 +22,7 @@ import java.util.Map;
  */
 @RestController
 @RequestMapping("/api/")
+@RefreshScope
 @Slf4j
 public class UserController {
 
