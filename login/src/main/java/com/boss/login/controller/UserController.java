@@ -21,7 +21,7 @@ import java.util.Map;
  * @create :2020-07-30 16:11:00
  */
 @RestController
-@RequestMapping("/api/")
+@RequestMapping("/api/user")
 @RefreshScope
 @Slf4j
 public class UserController {

@@ -14,6 +14,6 @@ public interface LoginConsumerClient {
      *
      * @return
      */
-    @GetMapping("/api/loginStatu")
+    @GetMapping("/api/user/loginStatu")
     boolean getLoginStatu();
 }
